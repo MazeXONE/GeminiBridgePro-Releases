@@ -1,6 +1,10 @@
 # Gemini Bridge Pro user guide
 
-Application reference: **1.7.6**. Updated **25 October 2026**. Menu names below follow the default English interface.
+Application reference: **1.7.7**. Updated **27 October 2026**. Menu names below follow the default English interface.
+
+AI Studio **Test all** now tests **All active accounts** by default. Use **Accounts for Test all** to choose one account instead. Chat, Responses and function calling run sequentially against each account's isolated endpoint. **Gemini accounts** also provides **Test all accounts** and individual **Test** buttons. Paused accounts are skipped. The shared pool pauses during isolated tests and is restored afterward; wait for other requests to finish first.
+
+**Quota and tests by account** starts collapsed. Click its header or **Show** to expand it; click **Hide** to collapse it. Keyboard users can focus the header and press Enter or Space. Accounts appear as cards in a responsive grid, using multiple columns in wide windows and one column in narrow windows. Each card keeps its status, model/time, API outcomes and test action together. The panel saves separate outcomes, model and time, with inspectable prompts and replies. **Available** means that account answered the tested model at that time. **Quota limit** indicates HTTP 429; session rejection, unsupported Responses API and other failures have separate states. The backend does not report a numeric remaining quota. Retest after changing models or backend folders, or after 24 hours. The individual Chat/Responses/Function calling buttons continue to test the shared pool and maintain separate evidence.
 
 [Install](#install-and-open) · [First setup](#first-setup) · [Clients](#connect-your-client) · [Parallel requests](#single-and-parallel-pool) · [Manual endpoints](#dedicated-account-endpoints) · [RDP](#public-https-and-rdp) · [Troubleshooting](#troubleshooting)
 
@@ -183,7 +187,7 @@ Themes and typography do not change accounts/routes. Quick settings supports rig
 
 The header maintenance control previews eligible app-owned cache/temp/history files before cleanup. It preserves accounts, credentials, backend installations, configuration, and current task results. Restart refreshes the app while backend services remain running. Cleanup and restart are blocked during app jobs/tasks. Cleanup frees disk space, not a guaranteed amount of RAM.
 
-The offline **Guide** includes searchable current instructions. Its footer reads created by [DesignMD Generator](https://designmdgenerator.dev), and its top-right **Developer** button opens [developer contact](https://t.me/mazda_dev).
+The offline **Guide** includes searchable current instructions. Its footer reads Created by [DesignMD Generator](https://designmdgenerator.dev), and its top-right **Developer** button opens [developer contact](https://t.me/mazda_dev).
 
 ## Troubleshooting
 

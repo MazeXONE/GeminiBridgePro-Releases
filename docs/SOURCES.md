@@ -2,7 +2,7 @@
 
 ## Current guide and application source
 
-Version 1.7.4 maintains the offline Guide from current application controls and verified source contracts. The original setup PDF is absent from current assets/distributions. Its credit reads created by [DesignMD Generator](https://designmdgenerator.dev). The **Developer** button opens [developer contact](https://t.me/mazda_dev).
+The offline Guide follows current application controls and verified source contracts. The original setup PDF is absent from current assets/distributions. Its credit reads Created by [DesignMD Generator](https://designmdgenerator.dev). The **Developer** button opens [developer contact](https://t.me/mazda_dev).
 
 `src/manual.js` maintains the twelve offline chapters; `resources/assistant-prompt.txt` supplies an English assistance reference. The in-app guide and generated assistance text follow the user's selected language. Examples do not establish model access or current account eligibility.
 

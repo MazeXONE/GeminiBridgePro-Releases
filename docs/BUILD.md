@@ -1,6 +1,6 @@
 # Build Gemini Bridge Pro from source
 
-Version **1.7.6**, documentation updated 25 October 2026.
+Version **1.7.7**, documentation updated 27 October 2026.
 
 Build native installers on their target OS. Windows x64 packages have been exercised in this environment. Linux/macOS configurations and runtime adapters are included; native builds and complete operation still require validation on those systems.
 
@@ -37,7 +37,7 @@ npm run release
 node scripts/verify-release.mjs
 ```
 
-`desktop:build` runs the UI/backend build before native compilation. The NSIS installer and uninstaller use the product's ICO. Packaging creates an installer, portable directory, ZIP, inventory, and checksums in `release/windows-v1.7.6/`. Read `manifest.json` for `portableDirectory`; the script uses a versioned directory, while the ZIP contains `GeminiBridgePro/`.
+`desktop:build` runs the UI/backend build before native compilation. The NSIS installer and uninstaller use the product's ICO. Packaging creates an installer, portable directory, ZIP, inventory, and checksums in `release/windows-v1.7.7/`. Read `manifest.json` for `portableDirectory`; the script uses a versioned directory, while the ZIP contains `GeminiBridgePro/`.
 
 The optional `.work/toolchain` GNU/MinGW installation belongs to the original development environment. A clean clone uses your installed standard toolchain. The cache is excluded from Git and need not be copied between devices.
 
