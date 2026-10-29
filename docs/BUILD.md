@@ -1,6 +1,6 @@
 # Build Gemini Bridge Pro from source
 
-Version **1.8.0**, documentation updated 29 October 2026.
+Version **1.8.1**, documentation updated 29 October 2026.
 
 Build native installers on their target OS. Windows x64 packages have been exercised in this environment. Linux/macOS configurations and runtime adapters are included; native builds and complete operation still require validation on those systems.
 

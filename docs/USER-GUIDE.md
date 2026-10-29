@@ -167,6 +167,8 @@ Closing the app does not stop these endpoints. Pool start/stop/restart/login and
 
 ### Restore the pool
 
+If the pool controls are disabled, use **Stop endpoints & restore pool** in the notice above them. The manual endpoint section opens when recovery is needed, even if it was previously collapsed. Endpoint identity is verified using executable, account/listener arguments and process creation time; an old PID reused by another application does not count as a running endpoint. Single/Parallel is saved capacity and does not start task queues on app launch.
+
 Stop sending requests from clients and wait for active work. Stop **all** manual endpoints. The app restores a pool it originally found running after the last endpoint stops. If shown, use **Restore pool** and wait for confirmation. An originally stopped pool stays stopped; start AI Studio manually after endpoints stop. Wait for `RUNNING`, then retest the router/model.
 
 ## Public HTTPS and RDP

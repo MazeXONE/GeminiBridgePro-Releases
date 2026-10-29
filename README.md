@@ -6,17 +6,19 @@ Your Gemini connections, managed in one workspace.
 
 Manage existing Gemini accounts, accessible models, 9Router or OmniRoute connections, client keys, API verification, parallel capacity and public HTTPS configuration from one desktop app. External coding clients handle their own files, terminal tools and agent orchestration.
 
-Version 1.8.0 adds **Active router** selection with separate settings and encrypted credentials. Both routers support installation, start/stop, dashboard login, local provider/model setup, client-key controls and API tests inside the app. See [router setup](docs/ROUTERS.md). Reapply the Codex profile and update existing client endpoints/keys after switching routers.
+**Active router** selection keeps separate settings and encrypted credentials for 9Router and OmniRoute. Both routers support installation, start/stop, dashboard login, local provider/model setup, client-key controls and API tests inside the app. See [router setup](docs/ROUTERS.md). Reapply the Codex profile and update existing client endpoints/keys after switching routers.
+
+Version 1.8.1 also verifies manual endpoint process identity and adds **Stop endpoints & restore pool** recovery above blocked pool controls. Stale PIDs no longer block account tests; saved Single/Parallel capacity does not start the task queue.
 
 ## Download for Windows
 
-Current stable version: **1.8.0**, Windows x64. No GitHub sign-in is required to download the packages.
+Current stable version: **1.8.1**, Windows x64. No GitHub sign-in is required to download the packages.
 
 | Download | Use |
 | --- | --- |
-| [Windows installer 1.8.0](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/windows-v1.8.0/GeminiBridgePro-v1.8.0-Windows-x64-Setup.exe) | Recommended for shortcuts and future in-app updates |
-| [Portable ZIP 1.8.0](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/windows-v1.8.0/GeminiBridgePro-v1.8.0-Windows-x64.zip) | Extract the complete archive before opening the app |
-| [SHA256SUMS.txt](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/windows-v1.8.0/SHA256SUMS.txt) | Compare download checksums |
+| [Windows installer 1.8.1](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/windows-v1.8.1/GeminiBridgePro-v1.8.1-Windows-x64-Setup.exe) | Recommended for shortcuts and future in-app updates |
+| [Portable ZIP 1.8.1](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/windows-v1.8.1/GeminiBridgePro-v1.8.1-Windows-x64.zip) | Extract the complete archive before opening the app |
+| [SHA256SUMS.txt](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/windows-v1.8.1/SHA256SUMS.txt) | Compare download checksums |
 | [Latest release](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/latest) / [Version history](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases) | Release notes and newer versions |
 
 GitHub's automatic **Source code** ZIP/tar links contain this distribution repository's documentation only. Choose the Setup EXE or portable ZIP above to install the application.
@@ -29,7 +31,7 @@ Use Windows x64 with WebView2, [Node.js](https://nodejs.org/en/download) and [Gi
 2. In PowerShell, compare the printed hash with the matching line in SHA256SUMS.txt:
 
    ```powershell
-   Get-FileHash .\GeminiBridgePro-v1.8.0-Windows-x64-Setup.exe -Algorithm SHA256
+   Get-FileHash .\GeminiBridgePro-v1.8.1-Windows-x64-Setup.exe -Algorithm SHA256
    ```
 
 3. Run the installer, then open **Gemini Bridge Pro** from its shortcut.
@@ -58,9 +60,9 @@ On your RDP, use **9Router → Public access** for managed HTTPS and active clie
 
 ## Check the version and update
 
-The sidebar and **Settings → Updates** show the installed version. From 1.8.0, checks run at startup and daily; **Check for updates** checks immediately. Select **Download update**, save your work, then confirm **Install & restart**. Active application jobs block installation. Existing account/settings storage is kept.
+The sidebar and **Settings → Updates** show the installed version. From 1.8.1, checks run at startup and daily; **Check for updates** checks immediately. Select **Download update**, save your work, then confirm **Install & restart**. Active application jobs block installation. Existing account/settings storage is kept.
 
-**Upgrading from 1.7.4 or 1.7.5:** download and run the 1.8.0 installer once over the existing installation using the same Windows account and location. Earlier builds either lack the updater or point at the private feed. You do not need to uninstall first. Future releases use this public channel. Portable users download/extract a new ZIP instead.
+**Upgrading from 1.7.4 or 1.7.5:** download and run the 1.8.1 installer once over the existing installation using the same Windows account and location. Earlier builds either lack the updater or point at the private feed. You do not need to uninstall first. Future releases use this public channel. Portable users download/extract a new ZIP instead.
 
 The public updater metadata is [latest.json](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/latest/download/latest.json). No GitHub token is embedded in the application.
 
@@ -81,7 +83,7 @@ npm run release
 node scripts/verify-release.mjs
 ```
 
-Windows output: `release/windows-v1.8.0/`. Native development: `npm run desktop:dev`. On another device, clone once, then use `git pull --ff-only` and `npm ci`. Build native installers on their target OS. Linux/macOS configurations are included; their native operation is not claimed as verified here. Normal personal builds do not require the maintainer's updater signing key.
+Windows output: `release/windows-v1.8.1/`. Native development: `npm run desktop:dev`. On another device, clone once, then use `git pull --ff-only` and `npm ci`. Build native installers on their target OS. Linux/macOS configurations are included; their native operation is not claimed as verified here. Normal personal builds do not require the maintainer's updater signing key.
 
 ## User documentation
 

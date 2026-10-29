@@ -1,5 +1,7 @@
 # Execution modes in Gemini Bridge Pro 1.2.1
 
+Version 1.8.1 fixes stale manual endpoint detection and adds a visible **Stop endpoints & restore pool** action above disabled pool controls. Process ownership includes the executable, account/listener arguments and recorded creation time. The automatic status check does not launch endpoints or task queues. Owned endpoints with an unreadable admin API remain visible with an error, and recovery refuses active requests or running task queues. The older version-scoped evidence below remains historical context.
+
 For current user instructions, including setup order and recovery when manual endpoints block Start AI Studio, see the [user guide](USER-GUIDE.md). This document retains the version-scoped execution evidence below.
 
 Open **Tasks & parallel** (Indonesia: **Tugas & paralel**).
