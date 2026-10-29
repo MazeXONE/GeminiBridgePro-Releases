@@ -1,6 +1,6 @@
 # Build Gemini Bridge Pro from source
 
-Version **1.7.7**, documentation updated 27 October 2026.
+Version **1.8.0**, documentation updated 29 October 2026.
 
 Build native installers on their target OS. Windows x64 packages have been exercised in this environment. Linux/macOS configurations and runtime adapters are included; native builds and complete operation still require validation on those systems.
 
@@ -9,6 +9,8 @@ The source repository is currently private. The commands below require an author
 ## Start from a clean checkout
 
 Install Git, **Node.js 22.12+** with npm, Rust stable through rustup, and the OS dependencies below. The minimum crate Rust version is recorded in `src-tauri/Cargo.toml`. The canonical repository is shown below; use your fork URL when appropriate:
+
+For the pinned OmniRoute runtime, use Node.js 22.22.2+ in the 22 series, or versions 24 through 26. Node.js 24 works with both supported routers.
 
 ```sh
 git clone https://github.com/MazeXONE/GeminiBridgePro.git
