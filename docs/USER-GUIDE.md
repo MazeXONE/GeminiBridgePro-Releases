@@ -56,6 +56,8 @@ Keep **Manual account endpoints** stopped. Open **Gemini accounts → AI Studio*
 
 The account controls allow reauthentication, pause/enable, checks, and deletion. Deletion requires confirmation and removes the backend's local account/session; it does not delete your Google account. Paused accounts remain listed and retain their login data.
 
+If browser sign-in hits Google restrictions, click **Add cookie** on the **AI Studio** tab (or inside an account's **Sign in again** dialog). Open a new Incognito/Private window, sign in to `https://aistudio.google.com`, and copy the cookies (Cookie-Editor JSON export or the `cookie` request header from F12 Network). In the same Incognito window, open `https://accounts.google.com` and copy its cookies into the second field (**accounts.google.com cookies**) so master cookies (`LSID`, `__Host-1PLSID`, `__Host-3PLSID`) are stored alongside `.google.com` cookies, then **close the Incognito window without signing out**. Including `accounts.google.com` cookies allows the headless worker to refresh short-lived `__Secure-1PSIDTS` tokens automatically instead of expiring after 20 minutes.
+
 `RUNNING` means the service is running. A ready session and model catalog describe readiness and metadata. Neither proves generation, current quota, or every model's eligibility. Check the account and run a model test.
 
 ### 4. Test a model
