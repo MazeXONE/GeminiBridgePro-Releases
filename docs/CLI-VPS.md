@@ -123,6 +123,9 @@ You do **not** need a browser or GUI on the VPS. Choose either method below:
    ```
    Once accounts show **`ready`**, you can close the SSH tunnel and turn off your local computer. All sessions remain stored on the VPS and serve requests 24/7.
 
+> **Why `127.0.0.1:2048` instead of `<YOUR_VPS_IP>:2048`? Running Gemini Bridge Desktop locally too?**
+> Read the detailed guide: [How SSH Tunneling & Port `2049` Avoid Local Conflicts](CLI-VPS-SSH-TUNNEL.md).
+
 > **Session longevity tip**: If you used *That computer's Chrome accounts*, do **not** click "Sign out" on those Google accounts in your local Chrome browser, as signing out revokes the shared session. Using **Sign in in a new window** avoids this.
 
 ### Method B: Direct Cookie / Storage-State Import via CLI
