@@ -21,6 +21,18 @@ Current stable version: **1.8.3**, Windows x64. No GitHub sign-in is required to
 | [SHA256SUMS.txt](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/windows-v1.8.3/SHA256SUMS.txt) | Compare download checksums |
 | [Latest release](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/latest) / [Version history](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases) | Release notes and newer versions |
 
+## Download CLI Edition (Linux VPS / Headless)
+
+Run Gemini Bridge Pro 24/7 on a headless Linux VPS (Ubuntu / Debian, Node.js 22.12+ and Git) with no GUI, no RDP, and AES-256-GCM headless credential storage. Includes one-command `router setup` (9Router/OmniRoute + `studio-responses/`), Caddy HTTPS, and `systemd` autostart.
+
+| Download | Use |
+| --- | --- |
+| [Linux VPS CLI tar.gz 1.8.3](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/cli-v1.8.3/GeminiBridgePro-CLI-v1.8.3-Linux.tar.gz) | Extract on Ubuntu/Debian VPS and run `sudo ./install.sh` |
+| [Cross-platform CLI ZIP 1.8.3](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/cli-v1.8.3/GeminiBridgePro-CLI-v1.8.3.zip) | Built single-file CLI bundle + full guides |
+| [CLI SHA256SUMS.txt](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/cli-v1.8.3/SHA256SUMS.txt) | Verify CLI archive checksums |
+
+Full VPS guide: [CLI VPS Guide](docs/CLI-VPS.md).
+
 GitHub's automatic **Source code** ZIP/tar links contain this distribution repository's documentation only. Choose the Setup EXE or portable ZIP above to install the application.
 
 ## Requirements and installation
@@ -90,6 +102,7 @@ Windows output: `release/windows-v1.8.3/`. Native development: `npm run desktop:
 | Guide | Contents |
 | --- | --- |
 | [User guide](docs/USER-GUIDE.md) | Full setup, account controls, testing and everyday use |
+| [CLI VPS guide](docs/CLI-VPS.md) | Headless Linux VPS installation, Add Remotely, 9Router + Responses, Caddy HTTPS, and systemd |
 | [9Router and OmniRoute](docs/ROUTERS.md) | Router selection, separate settings, key controls and runtime requirements |
 | [Build guide](docs/BUILD.md) | Windows/Linux/macOS tools and build commands |
 | [T3 Code](docs/T3-CODE.md) | Provider configuration and first reply |
