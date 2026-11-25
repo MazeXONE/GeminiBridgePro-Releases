@@ -16,8 +16,8 @@ Current stable version: **1.8.4**, Windows x64. No GitHub sign-in is required to
 
 | Download | Use |
 | --- | --- |
-| [Windows installer 1.8.4](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/windows-v1.8.4/GeminiBridgePro-v1.8.4-Windows-x64-Setup.exe) | Recommended for shortcuts and future in-app updates |
-| [Portable ZIP 1.8.4](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/windows-v1.8.4/GeminiBridgePro-v1.8.4-Windows-x64.zip) | Extract the complete archive before opening the app |
+| [Windows installer 1.8.4](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/windows-v1.8.4/GeminiBridgePro-v1.8.4-Windows-x64-Setup.exe) | Recommended for shortcuts and direct in-app updates |
+| [Portable ZIP 1.8.4](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/windows-v1.8.4/GeminiBridgePro-v1.8.4-Windows-x64.zip) | Extract the complete archive; supports signed in-app updates from 1.8.4 |
 | [SHA256SUMS.txt](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/windows-v1.8.4/SHA256SUMS.txt) | Compare download checksums |
 | [Latest release](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/latest) / [Version history](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases) | Release notes and newer versions |
 
@@ -51,7 +51,7 @@ Use Windows x64 with WebView2, [Node.js](https://nodejs.org/en/download) and [Gi
 
 The installer/uninstaller use the product logo. Windows publisher/Authenticode signing is not configured; updater signatures separately verify official update packages.
 
-For portable use, extract the entire ZIP and run `GeminiBridgePro/GeminiBridgePro.exe`. Keep its backend folder and DLL beside the executable. Portable files do not include your accounts/settings and do not use in-app installer replacement.
+For portable use, extract the entire ZIP and run `GeminiBridgePro/GeminiBridgePro.exe`. Keep its backend folder and DLL beside the executable. Portable files keep your accounts/settings in the local data directory and support signed in-place updates from **Settings → Updates** starting in 1.8.4.
 
 ## First connection
 
@@ -72,9 +72,9 @@ On your RDP, use **9Router → Public access** for managed HTTPS and active clie
 
 ## Check the version and update
 
-The sidebar and **Settings → Updates** show the installed version. From 1.8.4, checks run at startup and daily; **Check for updates** checks immediately. Select **Download update**, save your work, then confirm **Install & restart**. Active application jobs block installation. Existing account/settings storage is kept.
+The sidebar and **Settings → Updates** show the installed version. Checks run at startup and daily; **Check for updates** checks immediately. Select **Download & install** (or **Download update** followed by **Install & restart**) to update directly inside the app for both Windows Installer and Portable editions. Active application jobs block installation, and existing account/settings storage is kept.
 
-**Upgrading from 1.7.4 or 1.7.5:** download and run the 1.8.4 installer once over the existing installation using the same Windows account and location. Earlier builds either lack the updater or point at the private feed. You do not need to uninstall first. Future releases use this public channel. Portable users download/extract a new ZIP instead.
+**Upgrading from 1.7.4, 1.7.5, or earlier portable builds:** run the 1.8.4 installer once over an older installed copy, or extract the 1.8.4 portable ZIP once. Earlier portable builds before 1.8.4 open the release page for manual download; starting in 1.8.4, both editions update directly inside the app.
 
 The public updater metadata is [latest.json](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/latest/download/latest.json). No GitHub token is embedded in the application.
 
