@@ -8,17 +8,17 @@ Manage existing Gemini accounts, accessible models, 9Router or OmniRoute connect
 
 **Active router** selection keeps separate settings and encrypted credentials for 9Router and OmniRoute. Both routers support installation, start/stop, dashboard login, local provider/model setup, client-key controls and API tests inside the app. See [router setup](docs/ROUTERS.md). Reapply the Codex profile and update existing client endpoints/keys after switching routers.
 
-Version 1.8.3 also verifies manual endpoint process identity and adds **Stop endpoints & restore pool** recovery above blocked pool controls. Stale PIDs no longer block account tests; saved Single/Parallel capacity does not start the task queue.
+Version 1.8.4 adds configurable automatic reconnection for 9Router/OmniRoute and the dedicated Studio Responses route (`studio-responses/`) whenever 24-hour proofs expire, models/accounts change, or the local router stops, while retaining manual endpoint recovery and **Stop endpoints & restore pool** controls.
 
 ## Download for Windows
 
-Current stable version: **1.8.3**, Windows x64. No GitHub sign-in is required to download the packages.
+Current stable version: **1.8.4**, Windows x64. No GitHub sign-in is required to download the packages.
 
 | Download | Use |
 | --- | --- |
-| [Windows installer 1.8.3](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/windows-v1.8.3/GeminiBridgePro-v1.8.3-Windows-x64-Setup.exe) | Recommended for shortcuts and future in-app updates |
-| [Portable ZIP 1.8.3](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/windows-v1.8.3/GeminiBridgePro-v1.8.3-Windows-x64.zip) | Extract the complete archive before opening the app |
-| [SHA256SUMS.txt](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/windows-v1.8.3/SHA256SUMS.txt) | Compare download checksums |
+| [Windows installer 1.8.4](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/windows-v1.8.4/GeminiBridgePro-v1.8.4-Windows-x64-Setup.exe) | Recommended for shortcuts and future in-app updates |
+| [Portable ZIP 1.8.4](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/windows-v1.8.4/GeminiBridgePro-v1.8.4-Windows-x64.zip) | Extract the complete archive before opening the app |
+| [SHA256SUMS.txt](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/windows-v1.8.4/SHA256SUMS.txt) | Compare download checksums |
 | [Latest release](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/latest) / [Version history](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases) | Release notes and newer versions |
 
 ## Download CLI Edition (Linux VPS / Headless)
@@ -27,9 +27,9 @@ Run Gemini Bridge Pro 24/7 on a headless Linux VPS (Ubuntu / Debian, Node.js 22.
 
 | Download | Use |
 | --- | --- |
-| [Linux VPS CLI tar.gz 1.8.3](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/cli-v1.8.3/GeminiBridgePro-CLI-v1.8.3-Linux.tar.gz) | Extract on Ubuntu/Debian VPS and run `sudo ./install.sh` |
-| [Cross-platform CLI ZIP 1.8.3](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/cli-v1.8.3/GeminiBridgePro-CLI-v1.8.3.zip) | Built single-file CLI bundle + full guides |
-| [CLI SHA256SUMS.txt](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/cli-v1.8.3/SHA256SUMS.txt) | Verify CLI archive checksums |
+| [Linux VPS CLI tar.gz 1.8.4](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/cli-v1.8.4/GeminiBridgePro-CLI-v1.8.4-Linux.tar.gz) | Extract on Ubuntu/Debian VPS and run `sudo ./install.sh` |
+| [Cross-platform CLI ZIP 1.8.4](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/cli-v1.8.4/GeminiBridgePro-CLI-v1.8.4.zip) | Built single-file CLI bundle + full guides |
+| [CLI SHA256SUMS.txt](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/download/cli-v1.8.4/SHA256SUMS.txt) | Verify CLI archive checksums |
 
 Full VPS guide: [CLI VPS Guide](docs/CLI-VPS.md).
 
@@ -43,7 +43,7 @@ Use Windows x64 with WebView2, [Node.js](https://nodejs.org/en/download) and [Gi
 2. In PowerShell, compare the printed hash with the matching line in SHA256SUMS.txt:
 
    ```powershell
-   Get-FileHash .\GeminiBridgePro-v1.8.3-Windows-x64-Setup.exe -Algorithm SHA256
+   Get-FileHash .\GeminiBridgePro-v1.8.4-Windows-x64-Setup.exe -Algorithm SHA256
    ```
 
 3. Run the installer, then open **Gemini Bridge Pro** from its shortcut.
@@ -72,9 +72,9 @@ On your RDP, use **9Router → Public access** for managed HTTPS and active clie
 
 ## Check the version and update
 
-The sidebar and **Settings → Updates** show the installed version. From 1.8.3, checks run at startup and daily; **Check for updates** checks immediately. Select **Download update**, save your work, then confirm **Install & restart**. Active application jobs block installation. Existing account/settings storage is kept.
+The sidebar and **Settings → Updates** show the installed version. From 1.8.4, checks run at startup and daily; **Check for updates** checks immediately. Select **Download update**, save your work, then confirm **Install & restart**. Active application jobs block installation. Existing account/settings storage is kept.
 
-**Upgrading from 1.7.4 or 1.7.5:** download and run the 1.8.3 installer once over the existing installation using the same Windows account and location. Earlier builds either lack the updater or point at the private feed. You do not need to uninstall first. Future releases use this public channel. Portable users download/extract a new ZIP instead.
+**Upgrading from 1.7.4 or 1.7.5:** download and run the 1.8.4 installer once over the existing installation using the same Windows account and location. Earlier builds either lack the updater or point at the private feed. You do not need to uninstall first. Future releases use this public channel. Portable users download/extract a new ZIP instead.
 
 The public updater metadata is [latest.json](https://github.com/MazeXONE/GeminiBridgePro-Releases/releases/latest/download/latest.json). No GitHub token is embedded in the application.
 
@@ -95,7 +95,7 @@ npm run release
 node scripts/verify-release.mjs
 ```
 
-Windows output: `release/windows-v1.8.3/`. Native development: `npm run desktop:dev`. On another device, clone once, then use `git pull --ff-only` and `npm ci`. Build native installers on their target OS. Linux/macOS configurations are included; their native operation is not claimed as verified here. Normal personal builds do not require the maintainer's updater signing key.
+Windows output: `release/windows-v1.8.4/`. Native development: `npm run desktop:dev`. On another device, clone once, then use `git pull --ff-only` and `npm ci`. Build native installers on their target OS. Linux/macOS configurations are included; their native operation is not claimed as verified here. Normal personal builds do not require the maintainer's updater signing key.
 
 ## User documentation
 
@@ -103,6 +103,7 @@ Windows output: `release/windows-v1.8.3/`. Native development: `npm run desktop:
 | --- | --- |
 | [User guide](docs/USER-GUIDE.md) | Full setup, account controls, testing and everyday use |
 | [CLI VPS guide](docs/CLI-VPS.md) | Headless Linux VPS installation, Add Remotely, 9Router + Responses, Caddy HTTPS, and systemd |
+| [CLI VPS SSH tunnel guide](docs/CLI-VPS-SSH-TUNNEL.md) | Why `127.0.0.1:2048` connects to your VPS via SSH tunnel and how to use port `2049` with Desktop |
 | [9Router and OmniRoute](docs/ROUTERS.md) | Router selection, separate settings, key controls and runtime requirements |
 | [Build guide](docs/BUILD.md) | Windows/Linux/macOS tools and build commands |
 | [T3 Code](docs/T3-CODE.md) | Provider configuration and first reply |

@@ -1,10 +1,10 @@
-Gemini Bridge Pro 1.8.3
+Gemini Bridge Pro 1.8.4
 
-Updates the pinned Magpie backend revision to v0.13.0 (AIStudio2API v0.3.5-magpie.1 with SpiderMonkey WAA and gemini-web2api-go v4.28.0-magpie.1) while preserving all existing accounts, settings and routes.
+Adds automatic reconnection for 9Router/OmniRoute and the dedicated Studio Responses route (`studio-responses/`) when routes become unverified, 24-hour proofs expire, accounts or models change, or the local router process stops.
 
-- Native Windows credential reads now decrypt DPAPI entries directly in the desktop host for each operation instead of launching PowerShell on every status snapshot.
-- WebView2 runs with consolidated in-process network/utility services, a single renderer limit and disabled browser background bloat while preserving all CSS transitions, splash animations and DevTools verification hooks.
-- Automatic working-set trimming releases cold startup and inactive pages across the desktop host, WebView2 child processes and managed Node.js router services.
-- Manual endpoint ownership and recovery from 1.8.1 and selectable 9Router/OmniRoute support from 1.8.0 remain intact.
+- New **Auto-reconnect when disconnected (including Responses route)** setting in **9Router → Backend & connection** and **Settings → General**.
+- One-click **Connect automatically** dialog option to verify both the primary Chat/Responses route and the dedicated Studio Responses route together so Guided setup reaches 5/6 immediately.
+- Exponential retry backoff and manual-stop protection prevent unwanted background loops when upstream quota is exhausted or the router is stopped intentionally.
+- Preserves all existing accounts, client keys, Magpie v0.13.0 backends and UI workflows.
 
 Windows installer users can install over the existing installation with the same Windows account and location. Portable users should extract the entire new ZIP. Account data and settings remain in their existing data folder.
