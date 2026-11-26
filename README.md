@@ -8,7 +8,7 @@ Manage existing Gemini accounts, accessible models, 9Router or OmniRoute connect
 
 **Active router** selection keeps separate settings and encrypted credentials for 9Router and OmniRoute. Both routers support installation, start/stop, dashboard login, local provider/model setup, client-key controls and API tests inside the app. See [router setup](docs/ROUTERS.md). Reapply the Codex profile and update existing client endpoints/keys after switching routers.
 
-Version 1.8.5 introduces **Direct Magpie Mode (`127.0.0.1:2048`)** as the lightweight local default without requiring 9Router, adds **Other apps → Claude Code** for native Anthropic setup, defaults **Parallel** pool capacity to **`Fill first`** for maximum AI Studio prompt cache hits, and automatically disables 9Router **RTK** tool-output truncation when router mode is connected—alongside direct in-app updates, 9Router/OmniRoute auto-reconnect, and the headless CLI edition.
+Version 1.8.5 upgrades the pinned Magpie backend to **v0.18.0** (`AIStudio2API v0.3.15`+ & `Gemini Web v4.31.0-magpie.2`, fixing Gemini 4 multi-turn tool `DELTA = +0` stalls with one-click **Update backends**), introduces **Direct Magpie Mode (`127.0.0.1:2048`)** as the lightweight local default without requiring 9Router, adds **Other apps → Claude Code** for native Anthropic setup, defaults **Parallel** pool capacity to **`Fill first`** (`max_account_switches: 25`) for maximum AI Studio prompt cache hits, and automatically disables 9Router **RTK** tool-output truncation when router mode is connected—alongside direct in-app updates, 9Router/OmniRoute auto-reconnect, and the headless CLI edition.
 
 ## Download for Windows
 
