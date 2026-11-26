@@ -1,9 +1,9 @@
-Gemini Bridge Pro 1.8.4
+Gemini Bridge Pro 1.8.5
 
-Adds direct in-app updates for both Gemini Bridge Pro (Installer & Portable) and managed 9Router / OmniRoute installations, formatted Release Notes, automatic reconnection for 9Router/OmniRoute, dedicated Studio Responses route sync, and the headless Linux VPS CLI edition.
+Introduces **Direct Magpie Mode (`127.0.0.1:2048`)** as the lightweight local default without requiring 9Router, adds a native **Claude Code (Anthropic)** client guide, defaults Parallel pool capacity to **Fill first** for maximum AI Studio prompt cache hits, and automatically disables **RTK** tool-output truncation when connecting 9Router.
 
-- **Direct in-app app updates (`Settings → Updates`)**: One-click **Download & install** verifies Ed25519 package signatures and updates both Windows Installer (`Setup.exe`) and Portable (`ZIP`) editions directly inside the app with automatic restart.
-- **Managed 9Router / OmniRoute updates (`9Router`)**: Check for newer router versions automatically on start/check or via **Check 9Router updates**, view formatted release notes, and run safe staged updates via **Update 9Router** with automatic rollback protection and `.next-cli-build` timestamp hardening.
-- **Clean Release Notes view**: Formatted, scrollable **Release notes** card in **Settings → Updates** and the **9Router** panel with clean headings, lists, and inline code badges.
-- **9Router / OmniRoute auto-reconnect**: New **Auto-reconnect when disconnected (including Responses route)** setting automatically restores managed router processes, Chat routes, and dedicated Studio Responses routes (`studio-responses/`).
-- **One-click Responses sync**: **Connect automatically** verifies both the primary route and the Studio Responses route together so Guided setup reaches 5/6 immediately.
+- **Direct Magpie Mode (`Direct (Magpie)` vs `Via 9Router`)**: Local coding clients now connect straight to AI Studio (`http://127.0.0.1:2048/v1` and `:2048`) in a single hop—saving hundreds of MB of RAM and bypassing intermediary proxy overhead. Switch anytime to **Via 9Router** when you need multiple separate client keys, Caddy public RDP HTTPS, or Gemini Web fallback.
+- **Claude Code Native Anthropic Guide (`Other apps → Claude Code`)**: Generates ready-to-merge `~/.claude/settings.json` configuration (`ANTHROPIC_BASE_URL=http://127.0.0.1:2048`) with one-click AI Studio key copying.
+- **Direct T3 Code, Codex CLI, Zed & Chatbox**: Generates unprefixed model configurations (`gemini-4-argon`, `magpie-studio`, `GEMINI_BRIDGE_API_KEY`) directly against Magpie `:2048` across all eight interface languages.
+- **`Fill first` Parallel Strategy (`Tasks & parallel`)**: Parallel mode now defaults to `fill-first` (with an explicit `Fill first` / `Round robin` selector) so concurrent multi-app requests run in parallel while keeping coding threads pinned to warm accounts for ~90% AI Studio cache hit rates.
+- **Automatic 9Router RTK Guard**: Connecting 9Router (`Connect automatically`, `Responses route`, or Caddy public proxy) automatically sets `rtkEnabled: false` so tool outputs in T3 Code and Codex are never truncated.
